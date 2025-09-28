@@ -5,7 +5,7 @@
             <span class="menu-title">Dashboard</span>
         </a>
     </li>
-    <!-- Zone List -->
+    <!-- Logo -->
     <li class="nav-item">
         <a class="nav-link" href="{{ route('logos.index') }}">
             <i class="bi bi-image menu-icon"></i>
@@ -13,55 +13,84 @@
         </a>
     </li>
 
-    <!-- Collector List -->
+    <!-- Slider -->
     <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#collector-menu" aria-expanded="false"
-            aria-controls="collector-menu">
-            <i class="bi bi-people menu-icon"></i>
-            <span class="menu-title">Collector List</span>
-            <i class="menu-arrow bi bi-chevron-down"></i>
+        <a class="nav-link" href="{{ route('sliders.index') }}">
+            <i class="bi bi-images menu-icon"></i>
+            <span class="menu-title">Sliders</span>
         </a>
-        <div class="collapse" id="collector-menu">
-            <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        All Collectors
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        Add New Collector
-                    </a>
-                </li>
-            </ul>
-        </div>
     </li>
 
-    <!-- Shop List -->
+    <!-- Feature -->
     <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#shop-menu" aria-expanded="false" aria-controls="shop-menu">
-            <i class="bi bi-shop menu-icon"></i>
-            <span class="menu-title">Shop List</span>
-            <i class="menu-arrow bi bi-chevron-down"></i>
+        <a class="nav-link" href="#">
+            <i class="bi bi-ui-checks menu-icon"></i>
+            <span class="menu-title">Features</span>
         </a>
-        <div class="collapse" id="shop-menu">
-            <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        All Shops
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        Add New Shop
-                    </a>
-                </li>
-            </ul>
-        </div>
+    </li>
+
+    <!-- About -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-textarea-resize menu-icon"></i>
+            <span class="menu-title">About</span>
+        </a>
+    </li>
+
+    <!-- Counter -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-clock menu-icon"></i>
+            <span class="menu-title">Counters</span>
+        </a>
+    </li>
+
+    <!-- Services -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-ui-radios-grid menu-icon"></i>
+            <span class="menu-title">Services</span>
+        </a>
+    </li>
+
+    <!-- Portfolio -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-segmented-nav menu-icon"></i>
+            <span class="menu-title">Portfolio</span>
+        </a>
+    </li>
+
+    <!-- Testimonial -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-list-stars menu-icon"></i>
+            <span class="menu-title">Testimonial</span>
+        </a>
+    </li>
+
+    <!-- Contact -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-person-rolodex menu-icon"></i>
+            <span class="menu-title">Contact</span>
+        </a>
+    </li>
+
+    <!-- Custom -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-code-slash menu-icon"></i>
+            <span class="menu-title">Custom CSS</span>
+        </a>
+    </li>
+
+    <!-- Settings -->
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="bi bi-gear menu-icon"></i>
+            <span class="menu-title">Settings</span>
+        </a>
     </li>
     {{-- <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
