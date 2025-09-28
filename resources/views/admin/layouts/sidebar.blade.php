@@ -7,27 +7,10 @@
     </li>
     <!-- Zone List -->
     <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" href="#zone-menu" aria-expanded="false" aria-controls="zone-menu">
-            <i class="bi bi-geo-alt menu-icon"></i>
-            <span class="menu-title">Zone List</span>
-            <i class="menu-arrow bi bi-chevron-down"></i>
+        <a class="nav-link" href="{{ route('logos.index') }}">
+            <i class="bi bi-image menu-icon"></i>
+            <span class="menu-title">Logo</span>
         </a>
-        <div class="collapse" id="zone-menu">
-            <ul class="nav flex-column sub-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        All Zones
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="sub-menu-icon"></i>
-                        Add New Zone
-                    </a>
-                </li>
-            </ul>
-        </div>
     </li>
 
     <!-- Collector List -->

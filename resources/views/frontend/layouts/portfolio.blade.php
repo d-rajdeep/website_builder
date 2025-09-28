@@ -22,7 +22,7 @@
             <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-                    <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
+                    <img src="{{ asset('frontend/assets/img/portfolio/app-1.jpg')}}" class="img-fluid" alt="">
                     <div class="portfolio-info">
                         <h4>App 1</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur</p>
