@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\SliderController;
+use App\Models\About;
 use Illuminate\Support\Facades\Route;
 
 // Login page
@@ -41,3 +43,11 @@ Route::post('features/store',[FeatureController::class,'store'])->name('features
 Route::get('features/edit', [FeatureController::class, 'edit'])->name('features.edit')->middleware('auth');
 Route::put('/features/update-all', [FeatureController::class, 'updateAll'])->name('features.updateAll')->middleware('auth');
 Route::delete('features/{logo}', [FeatureController::class, 'destroy'])->name('features.destroy')->middleware('auth');
+
+// About
+Route::get('about', [AboutController::class,'index'])->name('about.index')->middleware('auth');
+Route::get('about/create',[AboutController::class,'create'])->name('about.create')->middleware('auth');
+Route::post('about/store',[AboutController::class,'store'])->name('about.store')->middleware('auth');
+Route::get('about/edit', [AboutController::class, 'edit'])->name('about.edit')->middleware('auth');
+Route::put('about/update', [AboutController::class, 'update'])->name('about.update')->middleware('auth');
+Route::delete('about/{logo}', [AboutController::class, 'destroy'])->name('about.destroy')->middleware('auth');

@@ -31,7 +31,7 @@
 
     <!-- About -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('about.index')}}">
             <i class="bi bi-textarea-resize menu-icon"></i>
             <span class="menu-title">About</span>
         </a>
