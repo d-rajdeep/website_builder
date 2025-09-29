@@ -20,7 +20,7 @@
 
                     <div class="mb-3">
                         <label for="text" class="form-label">Text</label>
-                        <textarea name="text" class="form-control" rows="5" required>{{ old('text') }}</textarea>
+                        <textarea name="text" id="text-editor" class="form-control" rows="5" required>{{ old('text') }}</textarea>
                         @error('text')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
@@ -40,4 +40,34 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    {{-- ✅ CKEditor 5 CDN --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.1.0/classic/ckeditor.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            ClassicEditor
+                .create(document.querySelector('#text-editor'), {
+                    toolbar: {
+                        items: [
+                            'heading', '|',
+                            'bold', 'italic', 'underline', 'link', '|',
+                            'bulletedList', 'numberedList', '|',
+                            'undo', 'redo'
+                        ]
+                    },
+                    removePlugins: [
+                        'Image', 'ImageToolbar', 'ImageCaption', 'ImageStyle',
+                        'ImageUpload', 'MediaEmbed', 'EasyImage'
+                    ]
+                })
+                .then(editor => {
+                    console.log('CKEditor initialized successfully ✅', editor);
+                })
+                .catch(error => {
+                    console.error('CKEditor initialization failed ❌', error);
+                });
+        });
+    </script>
 @endsection

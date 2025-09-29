@@ -35,7 +35,7 @@ class AboutController extends Controller
             'image' => $path,
         ]);
 
-        return redirect()->route('about.index')->with('success', 'Slider uploaded successfully.');
+        return redirect()->route('about.index')->with('success', 'About added successfully.');
     }
 
 
@@ -74,7 +74,7 @@ class AboutController extends Controller
 
         $about->update($data);
 
-        return redirect()->route('about.index')->with('success', 'Slider updated successfully.');
+        return redirect()->route('about.index')->with('success', 'About added successfully.');
     }
 
     public function destroy($id)
@@ -88,6 +88,6 @@ class AboutController extends Controller
 
         $about->delete();
 
-        return redirect()->route('about.index')->with('success', 'Slider deleted successfully.');
+        return redirect()->route('about.index')->with('success', 'About deleted successfully.');
     }
 }

@@ -47,7 +47,7 @@
 
     <!-- Services -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('services.index')}}">
             <i class="bi bi-ui-radios-grid menu-icon"></i>
             <span class="menu-title">Services</span>
         </a>

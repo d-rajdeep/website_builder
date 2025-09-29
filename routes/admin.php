@@ -4,9 +4,12 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\LogoController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Models\About;
+use App\Models\Service;
 use Illuminate\Support\Facades\Route;
+
 
 // Login page
 Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
@@ -51,3 +54,11 @@ Route::post('about/store',[AboutController::class,'store'])->name('about.store')
 Route::get('about/edit', [AboutController::class, 'edit'])->name('about.edit')->middleware('auth');
 Route::put('about/update', [AboutController::class, 'update'])->name('about.update')->middleware('auth');
 Route::delete('about/{logo}', [AboutController::class, 'destroy'])->name('about.destroy')->middleware('auth');
+
+// Services Routes
+Route::get('services', [ServiceController::class,'index'])->name('services.index')->middleware('auth');
+Route::get('services/create',[ServiceController::class,'create'])->name('services.create')->middleware('auth');
+Route::post('services/store',[ServiceController::class,'store'])->name('services.store')->middleware('auth');
+Route::get('services/edit', [ServiceController::class, 'edit'])->name('services.edit')->middleware('auth');
+Route::put('/services/update-all', [ServiceController::class, 'updateAll'])->name('services.updateAll')->middleware('auth');
+Route::delete('services/{logo}', [ServiceController::class, 'destroy'])->name('services.destroy')->middleware('auth');
