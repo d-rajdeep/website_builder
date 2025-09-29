@@ -23,7 +23,7 @@
 
     <!-- Feature -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('features.index')}}">
             <i class="bi bi-ui-checks menu-icon"></i>
             <span class="menu-title">Features</span>
         </a>

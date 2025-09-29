@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,11 @@ Route::post('slider/store',[SliderController::class,'store'])->name('sliders.sto
 Route::get('slider/edit', [SliderController::class, 'edit'])->name('sliders.edit')->middleware('auth');
 Route::put('slider/update', [SliderController::class, 'update'])->name('sliders.update')->middleware('auth');
 Route::delete('sliders/{logo}', [SliderController::class, 'destroy'])->name('sliders.destroy')->middleware('auth');
+
+// Features
+Route::get('features', [FeatureController::class,'index'])->name('features.index')->middleware('auth');
+Route::get('features/create',[FeatureController::class,'create'])->name('features.create')->middleware('auth');
+Route::post('features/store',[FeatureController::class,'store'])->name('features.store')->middleware('auth');
+Route::get('features/edit', [FeatureController::class, 'edit'])->name('features.edit')->middleware('auth');
+Route::put('/features/update-all', [FeatureController::class, 'updateAll'])->name('features.updateAll')->middleware('auth');
+Route::delete('features/{logo}', [FeatureController::class, 'destroy'])->name('features.destroy')->middleware('auth');
