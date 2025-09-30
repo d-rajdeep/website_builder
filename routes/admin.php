@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\LogoController;
@@ -19,6 +20,9 @@ Route::post('/login', [AdminAuthController::class, 'login'])->name('admin.loginS
 Route::get('/dashboard', function () {
     return view('admin.dashboard'); // create this view
 })->middleware('auth')->name('dashboard');
+
+Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 // Logout
 Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');

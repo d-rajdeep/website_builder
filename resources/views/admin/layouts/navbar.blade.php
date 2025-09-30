@@ -2,7 +2,7 @@
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
     <a class="navbar-brand d-flex flex-column align-items-center text-decoration-none" href="{{ route('dashboard') }}">
       <span style="font-size: 1.25rem; font-weight: bold; color: #2c3e50;">Website</span>
-      <span style="font-size: 1rem; font-weight: 500; color: #4b49ac;">Admin Dashboard</span>
+      <span style="font-size: 1rem; font-weight: 500; color: #ac4986;">Admin Dashboard</span>
     </a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
