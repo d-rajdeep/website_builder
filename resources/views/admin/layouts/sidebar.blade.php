@@ -49,7 +49,7 @@
 
     <!-- Portfolio -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('portfolios.index')}}">
             <i class="bi bi-segmented-nav menu-icon"></i>
             <span class="menu-title">Portfolio</span>
         </a>

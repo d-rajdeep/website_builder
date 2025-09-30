@@ -22,7 +22,7 @@
                     <div class="alert alert-success">{{ session('success') }}</div>
                 @endif
 
-                <form action="{{ route('services.updateAll') }}" method="POST" id="services-form">
+                <form action="{{ route('services.updateAll') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
