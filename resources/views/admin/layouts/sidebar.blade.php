@@ -65,10 +65,16 @@
 
     <!-- Contact -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('contact.index')}}">
             <i class="bi bi-person-rolodex menu-icon"></i>
             <span class="menu-title">Contact</span>
         </a>
+        <a class="nav-link" href="{{route('admin.contact.messages')}}">
+            <i class="bi bi-person-rolodex menu-icon"></i>
+            <span class="menu-title">View Messages</span>
+        </a>
+
+
     </li>
 
     <!-- Custom -->
