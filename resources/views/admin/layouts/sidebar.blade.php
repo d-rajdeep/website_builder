@@ -57,7 +57,7 @@
 
     <!-- Testimonial -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('testimonials.index')}}">
             <i class="bi bi-list-stars menu-icon"></i>
             <span class="menu-title">Testimonial</span>
         </a>

@@ -8,6 +8,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TestimonialController;
 use App\Models\About;
 use App\Models\Service;
 use Illuminate\Support\Facades\Route;
@@ -75,3 +76,11 @@ Route::post('portfolios/store',[PortfolioController::class,'store'])->name('port
 Route::get('portfolios/edit/{id}', [PortfolioController::class, 'edit'])->name('portfolios.edit')->middleware('auth');
 Route::put('portfolios/update/{id}', [PortfolioController::class, 'update'])->name('portfolios.update')->middleware('auth');
 Route::delete('portfolios/{logo}', [PortfolioController::class, 'destroy'])->name('portfolios.destroy')->middleware('auth');
+
+// Testimonial
+Route::get('testimonials', [TestimonialController::class, 'index'])->name('testimonials.index')->middleware('auth');
+Route::get('testimonials/create', [TestimonialController::class, 'create'])->name('testimonials.create')->middleware('auth');
+Route::post('testimonials/store', [TestimonialController::class, 'store'])->name('testimonials.store')->middleware('auth');
+Route::get('testimonials/edit/{testimonial}', [TestimonialController::class, 'edit'])->name('testimonials.edit')->middleware('auth');
+Route::put('testimonials/update/{testimonial}', [TestimonialController::class, 'update'])->name('testimonials.update')->middleware('auth');
+Route::delete('testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy')->middleware('auth');
