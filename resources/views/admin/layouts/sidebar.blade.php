@@ -49,7 +49,7 @@
 
     <!-- Portfolio -->
     <li class="nav-item">
-        <a class="nav-link" href="{{route('portfolios.index')}}">
+        <a class="nav-link" href="{{ route('portfolios.index') }}">
             <i class="bi bi-segmented-nav menu-icon"></i>
             <span class="menu-title">Portfolio</span>
         </a>
@@ -57,7 +57,7 @@
 
     <!-- Testimonial -->
     <li class="nav-item">
-        <a class="nav-link" href="{{route('testimonials.index')}}">
+        <a class="nav-link" href="{{ route('testimonials.index') }}">
             <i class="bi bi-list-stars menu-icon"></i>
             <span class="menu-title">Testimonial</span>
         </a>
@@ -65,16 +65,18 @@
 
     <!-- Contact -->
     <li class="nav-item">
-        <a class="nav-link" href="{{route('contact.index')}}">
+        <a class="nav-link" href="{{ route('contact.index') }}">
             <i class="bi bi-person-rolodex menu-icon"></i>
-            <span class="menu-title">Contact</span>
+            <span class="menu-title">Contact Info</span>
         </a>
-        <a class="nav-link" href="{{route('admin.contact.messages')}}">
-            <i class="bi bi-person-rolodex menu-icon"></i>
-            <span class="menu-title">View Messages</span>
+    </li>
+
+    <!-- Contact Message -->
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.contact.messages') }}">
+            <i class="bi bi-chat-left-dots menu-icon"></i>
+            <span class="menu-title">Contact Messages</span>
         </a>
-
-
     </li>
 
     <!-- Custom -->

@@ -39,7 +39,7 @@
                                 @endif
                             </td>
                         </tr>
-                    </table>
+                    </table><br>
                     <a href="{{ route('contact.edit', $contact->id) }}" class="btn btn-warning btn-sm">Edit</a>
                 @else
                     <p class="text-muted">No contact info available yet.</p>

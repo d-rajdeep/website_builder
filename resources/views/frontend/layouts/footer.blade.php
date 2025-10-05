@@ -48,16 +48,16 @@
         </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">eNno</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-                href=“https://themewagon.com>ThemeWagon
-        </div>
+
+    <div class="text-center py-3">
+        <span class="text-muted d-block">
+            Copyright © 2025. All rights reserved.
+        </span>
+        <span class="text-muted d-block">
+            Developed by <a href="https://d-rajdeep.github.io/" target="_blank">RAJDEEP</a>
+        </span>
     </div>
+
+
 
 </footer>

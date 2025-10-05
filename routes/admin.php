@@ -94,14 +94,10 @@ Route::post('contact/store', [ContactInfoController::class, 'store'])->name('con
 Route::get('contact/{contact}/edit', [ContactInfoController::class, 'edit'])->name('contact.edit')->middleware('auth');
 Route::put('contact/{contact}', [ContactInfoController::class, 'update'])->name('contact.update')->middleware('auth');
 
-// Frontend Routes
-Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-Route::get('/reload-captcha', [ContactController::class, 'reloadCaptcha'])->name('contact.reload-captcha');
 
-// Admin Routes
+// Admin routes (protect these as needed)
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/contact/messages', [ContactController::class, 'index'])->name('admin.contact.messages');
-    Route::get('/contact/messages/{id}', [ContactController::class, 'show'])->name('admin.contact.messages.show');
-    Route::delete('/contact/messages/{contactMessage}', [ContactController::class, 'destroy'])->name('admin.contact.messages.destroy');
+    Route::get('/contact/messages/{contactMessage}', [ContactController::class, 'show'])->name('admin.contact.show');
+    Route::delete('/contact/messages/{contactMessage}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
 });

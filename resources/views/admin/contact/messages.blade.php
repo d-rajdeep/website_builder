@@ -25,6 +25,7 @@
                                     <th>Mobile</th>
                                     <th>Email</th>
                                     <th>Subject</th>
+                                    <th>Received</th>
                                     <th>Status</th>
                                     <th>Date</th>
                                     <th width="120">Actions</th>
@@ -47,6 +48,7 @@
                                             </a>
                                         </td>
                                         <td>{{ Str::limit($message->subject, 30) }}</td>
+                                        <td>{{ $message->created_at->format('M j, Y g:i A') }}</td>
                                         <td>
                                             @if ($message->is_read)
                                                 <span class="badge bg-success">Read</span>
@@ -56,11 +58,11 @@
                                         </td>
                                         <td>{{ $message->created_at->format('M d, Y h:i A') }}</td>
                                         <td>
-                                            <a href="{{ route('admin.contact.messages.show', $message->id) }}"
+                                            <a href="{{ route('admin.contact.show', $message->id) }}"
                                                 class="btn btn-sm btn-primary" title="View Message">
                                                 <i class="bi bi-eye"></i>
                                             </a>
-                                            <form action="{{ route('admin.contact.messages.destroy', $message->id) }}"
+                                            <form action="{{ route('admin.contact.destroy', $message->id) }}"
                                                 method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')

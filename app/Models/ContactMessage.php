@@ -11,14 +11,24 @@ class ContactMessage extends Model
 
     protected $fillable = [
         'name',
-        'mobile',
         'email',
+        'mobile',
         'subject',
         'message',
-        'is_read'
+        'read_at'
     ];
 
     protected $casts = [
-        'is_read' => 'boolean'
+        'read_at' => 'datetime',
     ];
+
+    public function markAsRead()
+    {
+        $this->update(['read_at' => now()]);
+    }
+
+    public function isRead()
+    {
+        return !is_null($this->read_at);
+    }
 }
