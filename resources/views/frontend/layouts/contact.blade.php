@@ -105,7 +105,7 @@
                         <div class="col-md-12">
                             <label for="message" class="pb-2">Message <span class="text-danger">*</span></label>
                             <textarea class="form-control" name="message" rows="10" id="message" required>{{ old('message') }}</textarea>
-                            <div class="form-text">Minimum 10 characters required</div>
+                            {{-- <div class="form-text">Minimum 10 characters required</div> --}}
                         </div>
 
                         <div class="col-md-12 text-center">
@@ -114,4 +114,5 @@
                     </div>
                 </form>
             </div>
+        </div>
 </section>

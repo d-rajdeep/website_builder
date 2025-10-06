@@ -49,6 +49,6 @@ class ContactInfoController extends Controller
 
         $contact->update($request->all());
 
-        return redirect()->route('admin.contact.index')->with('success', 'Contact info updated successfully.');
+        return redirect()->route('contact.index')->with('success', 'Contact info updated successfully.');
     }
 }

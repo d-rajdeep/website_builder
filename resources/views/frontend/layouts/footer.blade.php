@@ -3,14 +3,41 @@
     <div class="container footer-top">
         <div class="row gy-4">
             <div class="col-lg-4 col-md-6 footer-about">
-                <a href="index.html" class="d-flex align-items-center">
-                    <span class="sitename">Website Name</span>
-                </a>
-                <div class="footer-contact pt-3">
-                    <p>A108 Adam Street</p>
-                    <p>New York, NY 535022</p>
-                    <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                    <p><strong>Email:</strong> <span>info@example.com</span></p>
+                @php
+                    use App\Models\Logo;
+                    $logo = Logo::first();
+                @endphp
+
+                @if ($logo && $logo->image)
+                    <img src="{{ asset('storage/' . $logo->image) }}" alt="Logo"
+                        style="height: 100px; width: auto; object-fit: contain;">
+                @else
+                    <h1 class="sitename">Website</h1>
+                @endif
+                <div class="info-wrap">
+
+                    @php
+                        $contact = \App\Models\ContactInfo::first();
+                    @endphp
+
+                    @if ($contact)
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <p>{{ $contact->address }}</p>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                                <p>{{ $contact->phone }}</p>
+                        </div><!-- End Info Item -->
+
+                        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                                {{-- <h3>Email Us</h3> --}}
+                                <p>{{ $contact->email }}</p>
+                        </div><!-- End Info Item -->
+
+                    @else
+                        <p class="text-muted">Contact info is not available yet.</p>
+                    @endif
+
                 </div>
             </div>
 
