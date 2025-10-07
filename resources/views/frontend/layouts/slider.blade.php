@@ -11,7 +11,7 @@
 
                 <div class="d-flex">
                     <a href="#about" class="btn-get-started">Get Started</a>
-                    <a href="#contact" class="btn-warning-get-started ms-4">Contact Us</a>
+                    {{-- <a href="#contact" class="btn-warning-get-started ms-4">Contact Us</a> --}}
                 </div>
             </div>
 
