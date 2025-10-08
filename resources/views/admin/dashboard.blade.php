@@ -98,7 +98,7 @@
                     <div class="card-body">
                         <i class="bi bi-collection fs-1 text-primary"></i>
                         <h6 class="mt-2">Portfolio</h6>
-                        <a href="#" class="btn btn-primary mt-3">
+                        <a href="{{ route('portfolios.index') }}" class="btn btn-primary mt-3">
                             <i class="bi bi-eye me-1"></i> View Portfolio
                         </a>
                     </div>
@@ -111,7 +111,7 @@
                     <div class="card-body">
                         <i class="bi bi-chat-quote fs-1 text-success"></i>
                         <h6 class="mt-2">Testimonials</h6>
-                        <a href="#" class="btn btn-success mt-3">
+                        <a href="{{ route('testimonials.index') }}" class="btn btn-success mt-3">
                             <i class="bi bi-eye me-1"></i> View Testimonials
                         </a>
                     </div>
@@ -127,8 +127,8 @@
                     <div class="card-body">
                         <i class="bi bi-envelope fs-1 text-warning"></i>
                         <h6 class="mt-2">Contacts</h6>
-                        <a href="#" class="btn btn-warning mt-3">
-                            <i class="bi bi-eye me-1"></i> View Contacts
+                        <a href="{{ route('admin.contact.messages') }}" class="btn btn-warning mt-3">
+                            <i class="bi bi-eye me-1"></i> View Contact Messages
                         </a>
                     </div>
                 </div>
